@@ -10,6 +10,7 @@ import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.github.rjeschke.txtmark.Processor;
 
@@ -20,6 +21,8 @@ import com.github.rjeschke.txtmark.Processor;
 public final class MarkDown {
 
     private static SpannableStringBuilder fromMD(@NonNull String content) {
+        Log.i("MARKDOWN BUILDER T",content);
+
         Spanned htmlConverted;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
             htmlConverted = Html.fromHtml(Processor.process(content),
@@ -53,6 +56,8 @@ public final class MarkDown {
     }*/
 
     public static Spanned convert(@Nullable String input, Context context, AppCompatTextView source) {
+        if (input !=null) Log.i("MARKDOWN Convert2 T",input);
+
         SpannableStringBuilder result;
         if(TextUtils.isEmpty(input))
             result = fromMD("<b>No content available</b>");

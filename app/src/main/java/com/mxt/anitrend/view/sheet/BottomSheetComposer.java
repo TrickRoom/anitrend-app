@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -136,6 +137,8 @@ public class BottomSheetComposer extends BottomSheetBase implements ItemClickLis
      */
     @Override
     public void onItemClick(View target, IntPair<Object> data) {
+        Log.i("BRR", "STARTED!!");
+
         switch (target.getId()) {
             case R.id.insert_emoticon:
                 break;
