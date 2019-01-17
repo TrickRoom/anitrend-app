@@ -10,6 +10,8 @@
     <color name="colorPrimaryDarker">#182128</color>
     <color name="colorAccentDark">#009688</color>
 
+    <!-- Color MaterialDark -->
+
     <!-- Color AMODark -->
     <color name="colorBlack">#101010</color>
     <color name="colorPrimaryBlack">#000000</color>
